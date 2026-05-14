@@ -2,7 +2,7 @@
 
 The landing page for [Nopy](https://github.com/JoshuaHarris391/nopy) — an open-source, local-first journaling app.
 
-A React + TypeScript + Tailwind v4 site, built with Vite and deployed to GitHub Pages.
+A React + TypeScript + Tailwind v4 site, built with Vite.
 
 ## Develop
 
@@ -26,13 +26,9 @@ npm run test       # watch mode
 npm run test:run   # one-shot, CI mode
 ```
 
-## Deploy
+## CI
 
-Pushes to `main` build and publish to GitHub Pages via `.github/workflows/deploy.yml`.
-
-One-time setup in the GitHub repo: **Settings → Pages → Source: GitHub Actions**.
-
-The site publishes to `https://joshuaharris391.github.io/nopy-site/`. To use a custom domain, set `VITE_BASE=/` and add a `CNAME` file under `public/`.
+`.github/workflows/ci.yml` runs `npm run lint`, `npm run test:run`, and `npm run build` on every push to `main` and on pull requests.
 
 ## Design notes
 
