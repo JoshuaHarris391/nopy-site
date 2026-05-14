@@ -30,6 +30,14 @@ npm run test:run   # one-shot, CI mode
 
 `.github/workflows/ci.yml` runs `npm run lint`, `npm run test:run`, and `npm run build` on every push to `main` and on pull requests.
 
+## Base path
+
+The build defaults to root (`base: '/'`) — works for Vercel, custom domains, and `npm run preview` out of the box. To publish under a sub-path (e.g. GitHub Pages at `/nopy-site/`), build with:
+
+```
+VITE_BASE=/nopy-site/ npm run build
+```
+
 ## Design notes
 
 The page is intentionally calm. Warm parchment palette, Fraunces display serif, Source Serif body, and per-section reveal-on-scroll animations driven by a single `IntersectionObserver`. Honours `prefers-reduced-motion` — every transform/transition is disabled, content renders immediately.
