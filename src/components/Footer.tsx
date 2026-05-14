@@ -1,28 +1,12 @@
 import { GITHUB_URL, RELEASES_URL } from '../data/nav'
-
-function BrandMark() {
-  return (
-    <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path d="M3 18 V11 C3 7 7 5 12 5 C17 5 21 7 21 11 V18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        <path d="M3 18 H21" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        <path d="M8 18 V13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-        <path d="M12 18 V12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-        <path d="M16 18 V13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-      </svg>
-    </span>
-  )
-}
+import { Brand } from './Brand'
 
 export function Footer() {
   return (
     <footer>
       <div className="footer-inner">
         <div className="footer-brand">
-          <a href="#" className="brand">
-            <BrandMark />
-            <span className="brand-word">nopy</span>
-          </a>
+          <Brand />
           <p className="footer-tagline">A quiet, local-first journal that thinks with you.</p>
         </div>
         <div className="footer-col">

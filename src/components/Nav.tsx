@@ -1,20 +1,7 @@
 import { useNavScroll } from '../hooks/useNavScroll'
 import type { Theme } from '../hooks/useTheme'
 import { GITHUB_URL, NAV_LINKS } from '../data/nav'
-
-function BrandMark() {
-  return (
-    <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path d="M3 18 V11 C3 7 7 5 12 5 C17 5 21 7 21 11 V18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        <path d="M3 18 H21" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        <path d="M8 18 V13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-        <path d="M12 18 V12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-        <path d="M16 18 V13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-      </svg>
-    </span>
-  )
-}
+import { Brand } from './Brand'
 
 interface NavProps {
   theme: Theme
@@ -26,10 +13,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
   return (
     <nav className={`nav${scrolled ? ' scrolled' : ''}`} id="nav">
       <div className="nav-inner">
-        <a href="#" className="brand" aria-label="nopy home">
-          <BrandMark />
-          <span className="brand-word">nopy</span>
-        </a>
+        <Brand />
         <div className="nav-links">
           {NAV_LINKS.map((link) => (
             <a
