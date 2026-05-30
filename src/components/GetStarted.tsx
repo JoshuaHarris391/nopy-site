@@ -1,6 +1,5 @@
+import { Link } from 'react-router-dom'
 import { STEPS } from '../data/steps'
-import { STACK } from '../data/stack'
-import { CodeTabs } from './CodeTabs'
 
 export function GetStarted() {
   return (
@@ -12,8 +11,8 @@ export function GetStarted() {
             Up and running in <em>four steps.</em>
           </h2>
           <p className="section-lede">
-            Nopy is free and open source. Download the app, or build it from source yourself &mdash;
-            either way, everything stays yours.
+            Nopy is free and open source. Download the app, or build it from source yourself.
+            Either way, everything stays yours.
           </p>
         </div>
 
@@ -30,21 +29,10 @@ export function GetStarted() {
           ))}
         </div>
 
-        <CodeTabs />
-
-        <div className="stack">
-          {STACK.map((item) => (
-            <div key={item.name} className="stack-item">
-              <span className="stack-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24">{item.icon}</svg>
-              </span>
-              <span className="stack-text">
-                <h4>{item.name}</h4>
-                <p>{item.description}</p>
-              </span>
-            </div>
-          ))}
-        </div>
+        <p className="dev-link reveal">
+          Building from source, or curious about the data flows and stack?{' '}
+          <Link to="/developers">See the developer &amp; privacy notes &rarr;</Link>
+        </p>
       </div>
     </section>
   )

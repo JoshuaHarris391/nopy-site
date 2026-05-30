@@ -1,13 +1,13 @@
+import { Link } from 'react-router-dom'
 import { asset } from '../data/asset'
 
 interface BrandProps {
-  href?: string
   ariaLabel?: string
 }
 
-export function Brand({ href = '#', ariaLabel = 'nopy home' }: BrandProps) {
+export function Brand({ ariaLabel = 'nopy home' }: BrandProps) {
   return (
-    <a href={href} className="brand" aria-label={ariaLabel}>
+    <Link to="/" className="brand" aria-label={ariaLabel}>
       <span className="brand-mark" aria-hidden="true">
         <img
           src={asset('assets/nopy-logo.png')}
@@ -18,6 +18,6 @@ export function Brand({ href = '#', ariaLabel = 'nopy home' }: BrandProps) {
         />
       </span>
       <span className="brand-word">nopy</span>
-    </a>
+    </Link>
   )
 }

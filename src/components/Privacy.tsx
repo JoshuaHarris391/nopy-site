@@ -1,4 +1,5 @@
-import { ANTHRO_FACTS, ANTHRO_HEADING_HTML, PRIVACY_CELLS } from '../data/privacy'
+import { Link } from 'react-router-dom'
+import { PRIVACY_CELLS } from '../data/privacy'
 
 export function Privacy() {
   return (
@@ -11,7 +12,7 @@ export function Privacy() {
           </h2>
           <p className="section-lede">
             There&rsquo;s no nopy account and no nopy server. Your entries are files on your own
-            computer &mdash; and the AI can run there too, so nothing has to go online at all.
+            computer, and the AI can run there too, so nothing has to go online at all.
           </p>
         </div>
 
@@ -35,17 +36,10 @@ export function Privacy() {
           ))}
         </div>
 
-        <div className="anthropic-note reveal">
-          <h4 dangerouslySetInnerHTML={{ __html: ANTHRO_HEADING_HTML }} />
-          <div className="anthro-facts">
-            {ANTHRO_FACTS.map((fact) => (
-              <div key={fact.strong} className="anthro-fact">
-                <strong>{fact.strong}</strong>
-                {fact.body}
-              </div>
-            ))}
-          </div>
-        </div>
+        <p className="dev-link reveal">
+          Bringing a cloud key, or want to verify these claims yourself?{' '}
+          <Link to="/developers">Read the developer &amp; privacy notes &rarr;</Link>
+        </p>
       </div>
     </section>
   )

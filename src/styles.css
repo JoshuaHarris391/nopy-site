@@ -1084,3 +1084,24 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .blink { animation: none; opacity: 1; }
 }
+
+/* ── Developer / privacy page helpers ─────────────────────────────── */
+.dev-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--forest);
+  transition: color var(--t-fast);
+}
+.dev-back:hover { color: var(--ink); }
+
+.dev-link {
+  margin-top: 40px;
+  text-align: center;
+  font-family: var(--font-ui);
+  color: color-mix(in oklab, var(--ink) 68%, transparent);
+}
+.dev-link a { color: var(--forest); font-weight: 600; }
+.dev-link a:hover { text-decoration: underline; }

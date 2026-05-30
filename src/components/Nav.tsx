@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useNavScroll } from '../hooks/useNavScroll'
 import type { Theme } from '../hooks/useTheme'
 import { GITHUB_URL, NAV_LINKS } from '../data/nav'
@@ -15,16 +16,22 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
       <div className="nav-inner">
         <Brand />
         <div className="nav-links">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noopener noreferrer' : undefined}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.to ? (
+              <Link key={link.label} to={link.to}>
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
+              >
+                {link.label}
+              </a>
+            ),
+          )}
         </div>
         <div className="nav-cta">
           <button
@@ -55,7 +62,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
             </svg>
             GitHub
           </a>
-          <a href="#start" className="btn btn-primary">
+          <a href="/#start" className="btn btn-primary">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 4v12M6 10l6 6 6-6M4 20h16" />
             </svg>

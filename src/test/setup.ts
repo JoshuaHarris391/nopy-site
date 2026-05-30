@@ -39,3 +39,6 @@ if (!('IntersectionObserver' in window)) {
   // @ts-expect-error stubbing global
   window.IntersectionObserver = IO
 }
+
+// jsdom's window.scrollTo isn't implemented; the router's ScrollToTop calls it.
+vi.stubGlobal('scrollTo', vi.fn())

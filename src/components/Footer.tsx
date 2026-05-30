@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { GITHUB_URL, RELEASES_URL } from '../data/nav'
 import { Brand } from './Brand'
 
@@ -12,9 +13,10 @@ export function Footer() {
         <div className="footer-col">
           <h5>Product</h5>
           <ul>
-            <li><a href="#features">The App</a></li>
-            <li><a href="#privacy">Privacy</a></li>
-            <li><a href="#start">Get Started</a></li>
+            <li><a href="/#features">The App</a></li>
+            <li><a href="/#privacy">Privacy</a></li>
+            <li><a href="/#start">Get Started</a></li>
+            <li><Link to="/developers">Developer notes</Link></li>
           </ul>
         </div>
         <div className="footer-col">

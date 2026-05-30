@@ -18,7 +18,7 @@ export function Hero() {
               <em>Own everything.</em>
             </h1>
             <p className="hero-lede reveal in">
-              Nopy is a private journal that lives on your own computer &mdash; plain text files you
+              Nopy is a private journal that lives on your own computer: plain text files you
               keep, back up, and open in any app. When you want to go deeper, an AI companion grounded
               in <em>CBT and ACT</em> reflects on an entry with you. It can run entirely on your
               machine, so your words never have to leave it.

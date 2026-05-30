@@ -8,7 +8,7 @@ export interface StackItem {
 
 export const STACK: StackItem[] = [
   {
-    name: 'React 19',
+    name: 'React 18',
     description: 'UI framework',
     icon: (
       <>

@@ -23,9 +23,9 @@ export const PRIVACY_CELLS: PrivacyCell[] = [
     sub: 'Recommended · LM Studio on Your Mac',
     itemsHtml: [
       'Run the companion on your own machine with the free <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a> app. Chat and insights all happen on your computer.',
-      'Nothing you write — entries, questions, or summaries — ever goes online.',
+      'Nothing you write (entries, questions, or summaries) ever goes online.',
       'You don&rsquo;t have to take our word for it: in local mode, nothing nopy sends ever leaves your machine.',
-      'A small model like Gemma runs comfortably on a recent Mac — about 5&nbsp;GB on disk.',
+      'A small model like Gemma runs comfortably on a recent Mac (about 5&nbsp;GB on disk).',
     ],
   },
 ]

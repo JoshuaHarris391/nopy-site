@@ -27,7 +27,7 @@ export const FAQ: FAQItem[] = [
   {
     question: 'Where do my entries actually live?',
     answerHtml:
-      'As <code>.md</code> files in a folder you pick on your own machine. Each file is plain text — readable in any app and easy to back up. There is no nopy server, anywhere.',
+      'As <code>.md</code> files in a folder you pick on your own machine. Each file is plain text, readable in any app and easy to back up. There is no nopy server, anywhere.',
   },
   {
     question: 'How is the companion different from just pasting entries into Claude?',
