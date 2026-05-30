@@ -514,7 +514,7 @@ h1.hero-title em {
   background: var(--forest);
   flex-shrink: 0;
 }
-.privacy-cell.sent h3 .mk { background: var(--amber); }
+.privacy-cell.local-ai h3 .mk { background: var(--dusk-blue); }
 .privacy-cell h3 em { font-style: italic; font-weight: 400; }
 .privacy-cell .sub {
   font-family: var(--font-ui);
@@ -544,6 +544,15 @@ h1.hero-title em {
 }
 .privacy-list li code { font-family: var(--font-mono); font-size: .9em; }
 .privacy-list li em { font-style: italic; }
+.privacy-list li a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--forest) 50%, transparent);
+  transition: text-decoration-color var(--t-fast);
+}
+.privacy-list li a:hover { text-decoration-color: var(--forest); }
 
 .anthropic-note {
   margin-top: 36px;
@@ -779,6 +788,15 @@ h1.hero-title em {
 }
 .faq-a-inner code { font-family: var(--font-mono); }
 .faq-a-inner em { font-style: italic; }
+.faq-a-inner a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--forest) 50%, transparent);
+  transition: text-decoration-color var(--t-fast);
+}
+.faq-a-inner a:hover { text-decoration-color: var(--forest); }
 
 /* ─── CTA BANNER ─── */
 .cta-banner {

@@ -1,7 +1,7 @@
 export interface Step {
   num: string
   title: string
-  /** Body may contain <strong> and an inline <span class="blink"/> token (we render as a special key). */
+  /** Body may contain <strong> and an inline <span class="blink"/> token (rendered as a special key). */
   bodyHtml: string
 }
 
@@ -10,7 +10,7 @@ export const STEPS: Step[] = [
     num: '01',
     title: 'Get the app',
     bodyHtml:
-      'Download the Tauri desktop build for macOS or Linux &mdash; or clone the repo and run from source.',
+      'Download the Tauri desktop build for macOS or Linux, or clone the repo and run from source.',
   },
   {
     num: '02',
@@ -20,9 +20,9 @@ export const STEPS: Step[] = [
   },
   {
     num: '03',
-    title: 'Add a key (optional)',
+    title: 'Add a companion (optional)',
     bodyHtml:
-      'Paste your own Anthropic API key to enable the companion. Or leave it blank &mdash; nopy works as a plain journal.',
+      'Install <strong>LM Studio</strong> and load a small model to run the companion entirely on your Mac. This is the recommended setup. Or paste an Anthropic or OpenAI key if you&rsquo;d rather the cloud do the thinking. Leave both unset and nopy stays a plain Markdown journal.',
   },
   {
     num: '04',

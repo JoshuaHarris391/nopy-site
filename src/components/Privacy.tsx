@@ -7,10 +7,10 @@ export function Privacy() {
         <div className="section-head">
           <div className="section-eyebrow">Privacy &amp; your data</div>
           <h2 className="section-title">
-            No server of ours. <em>No account.</em> No telemetry.
+            No server. <em>No account.</em> No telemetry.
           </h2>
           <p className="section-lede">
-            Nopy separates cleanly into two layers, and we&rsquo;d rather be upfront about both than
+            Nopy separates cleanly into two layers. Better to be upfront about both than to
             hand-wave at &ldquo;privacy-first.&rdquo;
           </p>
         </div>
@@ -19,7 +19,7 @@ export function Privacy() {
           {PRIVACY_CELLS.map((cell) => (
             <div
               key={cell.variant}
-              className={`privacy-cell${cell.variant === 'sent' ? ' sent' : ''}`}
+              className={`privacy-cell${cell.variant !== 'local' ? ` ${cell.variant}` : ''}`}
             >
               <h3>
                 <span className="mk" />

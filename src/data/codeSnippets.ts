@@ -1,4 +1,4 @@
-export type CodeTab = 'desktop' | 'browser' | 'nvm'
+export type CodeTab = 'desktop' | 'nvm'
 
 export interface CodeToken {
   kind: 'comment' | 'prompt' | 'cmd' | 'flag' | 'plain'
@@ -37,20 +37,6 @@ export const CODE_BLOCKS: Record<CodeTab, CodeBlock> = {
       { kind: 'flag', text: 'dev' },
     ],
   ],
-  browser: [
-    [{ kind: 'comment', text: '# Browser mode — entries saved to IndexedDB, no filesystem access' }],
-    [
-      { kind: 'prompt', text: '$' },
-      { kind: 'cmd', text: ' npm install' },
-    ],
-    [
-      { kind: 'prompt', text: '$' },
-      { kind: 'cmd', text: ' npm run ' },
-      { kind: 'flag', text: 'dev' },
-    ],
-    [{ kind: 'plain', text: '' }],
-    [{ kind: 'comment', text: '# Opens at http://localhost:5173' }],
-  ],
   nvm: [
     [{ kind: 'comment', text: '# Install nvm' }],
     [
@@ -80,6 +66,5 @@ export const CODE_BLOCKS: Record<CodeTab, CodeBlock> = {
 
 export const CODE_TABS: Array<{ id: CodeTab; label: string }> = [
   { id: 'desktop', label: 'Desktop app' },
-  { id: 'browser', label: 'Run in browser' },
   { id: 'nvm', label: 'Prerequisites' },
 ]

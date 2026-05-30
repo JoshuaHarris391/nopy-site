@@ -18,9 +18,10 @@ export function Hero() {
               <em>think with yourself.</em>
             </h1>
             <p className="hero-lede reveal in">
-              Nopy is a local-first journal you keep on your own machine. Entries are plain Markdown
-              in a folder <em>you</em> choose. When you&rsquo;re ready to go deeper, a gentle
-              companion &mdash; grounded in CBT and ACT &mdash; can sit with the page alongside you.
+              Nopy is a local-first desktop app you keep on your own machine. Entries are plain
+              Markdown in a folder <em>you</em> choose. When you&rsquo;re ready to go deeper, a
+              gentle companion, grounded in CBT and ACT, can sit with the page alongside you. Run it{' '}
+              <em>entirely on your Mac</em> with LM&nbsp;Studio, so nothing leaves the loopback.
             </p>
             <div className="hero-ctas reveal in">
               <a href="#start" className="btn btn-primary btn-lg">

@@ -11,14 +11,14 @@ export function Signoff() {
         </div>
         <div className="signoff-letter reveal reveal-up">
           <p>
-            I built nopy for myself. I wanted somewhere quiet to sit with my own thinking &mdash; a
-            plain folder of plain files, on my own machine, that would still be there in ten years
-            even if I lost interest in maintaining it. Everything else grew out of that.
+            I built nopy for myself. I wanted somewhere quiet to sit with my own thinking. A plain
+            folder of plain files, on my own machine, that would still be there in ten years even if
+            I lost interest in maintaining it. Everything else grew out of that.
           </p>
           <p>
             Keeping it free felt right. Your journal shouldn&rsquo;t be a subscription, and your
-            words shouldn&rsquo;t live on someone else&rsquo;s server. If nopy helps you too &mdash;
-            if you find yourself coming back to it &mdash; that&rsquo;s already the point.
+            words shouldn&rsquo;t live on someone else&rsquo;s server. If nopy helps you too, if you
+            find yourself coming back to it, that&rsquo;s already the point.
           </p>
           <p>
             If you&rsquo;d like to keep me caffeinated while I keep working on it,{' '}
@@ -32,7 +32,7 @@ export function Signoff() {
             className="signoff-avatar"
           />
           <div className="signoff-name-block">
-            <div className="signoff-name">&mdash; Josh</div>
+            <div className="signoff-name">Josh</div>
             <div className="signoff-role">Maker of nopy</div>
           </div>
           <a
