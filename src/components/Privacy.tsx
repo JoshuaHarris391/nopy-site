@@ -5,13 +5,13 @@ export function Privacy() {
     <section className="section" id="privacy">
       <div className="wrap">
         <div className="section-head">
-          <div className="section-eyebrow">Privacy &amp; your data</div>
+          <div className="section-eyebrow">Your privacy</div>
           <h2 className="section-title">
-            No server. <em>No account.</em> No telemetry.
+            Your journal <em>never leaves your computer.</em>
           </h2>
           <p className="section-lede">
-            Nopy separates cleanly into two layers. Better to be upfront about both than to
-            hand-wave at &ldquo;privacy-first.&rdquo;
+            There&rsquo;s no nopy account and no nopy server. Your entries are files on your own
+            computer &mdash; and the AI can run there too, so nothing has to go online at all.
           </p>
         </div>
 

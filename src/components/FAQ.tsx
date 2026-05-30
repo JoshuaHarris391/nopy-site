@@ -9,12 +9,12 @@ export function FAQ() {
   }
 
   return (
-    <section className="section">
+    <section className="section" id="faq">
       <div className="wrap">
         <div className="section-head">
-          <div className="section-eyebrow">Answered quietly</div>
+          <div className="section-eyebrow">Common questions</div>
           <h2 className="section-title">
-            Questions before you <em>sit down.</em>
+            Questions before you <em>start.</em>
           </h2>
         </div>
 

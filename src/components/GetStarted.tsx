@@ -9,11 +9,11 @@ export function GetStarted() {
         <div className="section-head">
           <div className="section-eyebrow">Get started</div>
           <h2 className="section-title">
-            Up and running in <em>four quiet steps.</em>
+            Up and running in <em>four steps.</em>
           </h2>
           <p className="section-lede">
-            Nopy is open source. You can download a pre-built desktop app, or clone the repo and run
-            it yourself. Either way, you own everything.
+            Nopy is free and open source. Download the app, or build it from source yourself &mdash;
+            either way, everything stays yours.
           </p>
         </div>
 

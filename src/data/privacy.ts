@@ -11,10 +11,10 @@ export const PRIVACY_CELLS: PrivacyCell[] = [
     titleHtml: 'Your journal stays <em>fully local</em>',
     sub: 'Always · Never Leaves Your Machine',
     itemsHtml: [
-      'Your entries. <code>.md</code> files in a folder you pick on your own machine.',
-      'Your psychological profile and entry index. JSON on disk, never synced anywhere.',
-      'App state, preferences, session history. All on-device, all the time.',
-      'No account. No telemetry. No server, anywhere in the loop.',
+      'Your entries are <code>.md</code> files in a folder you pick. They never sync anywhere.',
+      'Your mood history and the patterns nopy finds stay on your computer too.',
+      'Your settings and session history live on-device, all the time.',
+      'No account to create, no usage tracking, no server in between.',
     ],
   },
   {
@@ -22,10 +22,10 @@ export const PRIVACY_CELLS: PrivacyCell[] = [
     titleHtml: 'Your companion can stay <em>local too</em>',
     sub: 'Recommended · LM Studio on Your Mac',
     itemsHtml: [
-      'Point nopy at a model running in <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a>. Chat, profile generation, entry indexing. Every AI call goes through <code>localhost</code>.',
-      'Nothing leaves the loopback interface. Not your prompts, not your entries, not your summaries.',
-      'Verify it yourself: open DevTools, send a message, watch the Network tab. Zero requests off-machine.',
-      'Gemma 4 E4B on a 16&nbsp;GB Mac is a sensible starting point. Smart, small, about 5&nbsp;GB on disk.',
+      'Run the companion on your own machine with the free <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a> app. Chat and insights all happen on your computer.',
+      'Nothing you write — entries, questions, or summaries — ever goes online.',
+      'You don&rsquo;t have to take our word for it: in local mode, nothing nopy sends ever leaves your machine.',
+      'A small model like Gemma runs comfortably on a recent Mac — about 5&nbsp;GB on disk.',
     ],
   },
 ]

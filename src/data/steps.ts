@@ -10,24 +10,24 @@ export const STEPS: Step[] = [
     num: '01',
     title: 'Get the app',
     bodyHtml:
-      'Download the Tauri desktop build for macOS or Linux, or clone the repo and run from source.',
+      'Download nopy for macOS or Linux. (Developers can build it from source instead.)',
   },
   {
     num: '02',
     title: 'Pick a folder',
     bodyHtml:
-      'In <strong>Settings &rarr; Data &amp; Privacy</strong>, choose where your Markdown entries should live.',
+      'In <strong>Settings &rarr; Data &amp; Privacy</strong>, choose where your entries live. That folder is yours.',
   },
   {
     num: '03',
     title: 'Add a companion (optional)',
     bodyHtml:
-      'Install <strong>LM Studio</strong> and load a small model to run the companion entirely on your Mac. This is the recommended setup. Or paste an Anthropic or OpenAI key if you&rsquo;d rather the cloud do the thinking. Leave both unset and nopy stays a plain Markdown journal.',
+      'Want the AI companion? Install the free <strong>LM Studio</strong> app to run it on your own machine, or paste an Anthropic or OpenAI key to use the cloud. Skip this and nopy stays a plain journal.',
   },
   {
     num: '04',
     title: 'Write',
     bodyHtml:
-      'Open the Journal tab. Begin. The page is listening.<span class="blink"></span>',
+      'Open the Journal tab and start writing.<span class="blink"></span>',
   },
 ]

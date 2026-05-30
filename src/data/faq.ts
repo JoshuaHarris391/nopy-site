@@ -17,7 +17,7 @@ export const FAQ: FAQItem[] = [
   {
     question: 'How does a local model compare to Claude or GPT?',
     answerHtml:
-      'Honestly: not as polished. Gemma 4 E4B is a smart small model and the everyday chat experience is good, but the long-form psychological profile is noticeably less nuanced than a frontier cloud model on the same prompt. Local mode is the right default for privacy. Reach for a cloud key only when you&rsquo;ve decided the trade is worth it.',
+      'Honestly: not as polished. Gemma 4 E4B is a smart small model and the everyday chat experience is good, but the long-form psychological profile is noticeably less nuanced than a big cloud model like Claude or GPT on the same prompt. Local mode is the right default for privacy. Reach for a cloud key only when you&rsquo;ve decided the trade is worth it.',
   },
   {
     question: 'What if I do want to use Anthropic or OpenAI?',
@@ -27,7 +27,7 @@ export const FAQ: FAQItem[] = [
   {
     question: 'Where do my entries actually live?',
     answerHtml:
-      'As <code>.md</code> files in a folder you pick on your own machine. Each file is human-readable, grep-able, and version-controllable. There is no nopy server, anywhere.',
+      'As <code>.md</code> files in a folder you pick on your own machine. Each file is plain text — readable in any app and easy to back up. There is no nopy server, anywhere.',
   },
   {
     question: 'How is the companion different from just pasting entries into Claude?',
@@ -37,11 +37,11 @@ export const FAQ: FAQItem[] = [
   {
     question: 'Is nopy a replacement for therapy?',
     answerHtml:
-      'No, and it does not try to be. It is a notebook with a quiet, well-read friend inside. If you&rsquo;re in distress, please reach out to a qualified professional or a crisis line.',
+      'No, and it does not try to be. It is a notebook with a well-read friend inside. If you&rsquo;re in distress, please reach out to a qualified professional or a crisis line.',
   },
   {
     question: 'Is this open source?',
     answerHtml:
-      'Yes. The repository is on GitHub. You can read the source, build it yourself, fork it, or contribute. The model that sits beside you in the evening should be something you can look directly at.',
+      'Yes. The repository is on GitHub. You can read the source, build it yourself, fork it, or contribute. Anything you trust with your private thoughts should be something you can read for yourself.',
   },
 ]

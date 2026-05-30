@@ -13,15 +13,15 @@ export function Hero() {
               <span className="dot" /> Version 0.3 · macOS · Linux
             </div>
             <h1 className="hero-title reveal in">
-              A quiet place to
+              Write privately. Reflect deeply.
               <br />
-              <em>think with yourself.</em>
+              <em>Own everything.</em>
             </h1>
             <p className="hero-lede reveal in">
-              Nopy is a local-first desktop app you keep on your own machine. Entries are plain
-              Markdown in a folder <em>you</em> choose. When you&rsquo;re ready to go deeper, a
-              gentle companion, grounded in CBT and ACT, can sit with the page alongside you. Run it{' '}
-              <em>entirely on your Mac</em> with LM&nbsp;Studio, so nothing leaves the loopback.
+              Nopy is a private journal that lives on your own computer &mdash; plain text files you
+              keep, back up, and open in any app. When you want to go deeper, an AI companion grounded
+              in <em>CBT and ACT</em> reflects on an entry with you. It can run entirely on your
+              machine, so your words never have to leave it.
             </p>
             <div className="hero-ctas reveal in">
               <a href="#start" className="btn btn-primary btn-lg">
@@ -48,20 +48,20 @@ export function Hero() {
                   <rect x="3" y="5" width="18" height="14" rx="1" />
                   <path d="M3 9h18" />
                 </svg>
-                No account · No telemetry
+                No account, no tracking
               </span>
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2 4 6v6c0 5 3.4 9.5 8 10 4.6-.5 8-5 8-10V6l-8-4z" />
                 </svg>
-                Your words stay on disk
+                Your words stay on your machine
               </span>
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 4h16v16H4z" />
                   <path d="M8 8h8M8 12h8M8 16h5" />
                 </svg>
-                Plain Markdown, grep-able
+                Plain text, readable anywhere
               </span>
             </div>
           </div>

@@ -5,10 +5,10 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Philosophy', href: '#philosophy' },
   { label: 'The App', href: '#features' },
   { label: 'Privacy', href: '#privacy' },
   { label: 'Get Started', href: '#start' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'GitHub', href: 'https://github.com/JoshuaHarris391/nopy', external: true },
 ]
 

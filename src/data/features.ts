@@ -14,10 +14,10 @@ export interface Feature {
 export const FEATURES: Feature[] = [
   {
     tag: 'Reflect · Journal',
-    titleHtml: 'Write like you mean it, in <em>your own files.</em>',
+    titleHtml: 'Write in plain text you&rsquo;ll <em>always be able to open.</em>',
     bodyHtml: [
-      'A clean writing surface in warm serif type, capped to a reading-appropriate line length. Mark your mood on a gentle 1–10 scale, or leave it. No prompts unless you want them.',
-      'Every entry is a plain <code>.md</code> file in the folder you choose. Readable in any editor. Grep-able. Back it up with your own tools. If nopy disappeared tomorrow, your journal wouldn&rsquo;t.',
+      'A clean writing page in warm serif type, sized for comfortable reading. Add a 1–10 mood rating if it helps, or skip it — prompts only if you want them.',
+      'Every entry is a plain <code>.md</code> file in a folder you choose: readable in any editor, easy to back up, and yours to keep. If nopy disappeared tomorrow, your journal wouldn&rsquo;t.',
     ],
     image: asset('assets/editor.png'),
     alt: 'The nopy journal editor showing a long entry set in warm serif type, with a mood scale at the top.',
@@ -25,11 +25,11 @@ export const FEATURES: Feature[] = [
   },
   {
     tag: 'Understand · Chat',
-    titleHtml: 'A companion grounded in <em>CBT and ACT.</em>',
+    titleHtml: 'An AI companion that <em>reflects with you.</em>',
     bodyHtml: [
-      'When you&rsquo;re ready to sit with an entry, the companion can read it with you. It asks better questions than a blank screen. It notices what you&rsquo;ve been circling. It doesn&rsquo;t tell you what to feel.',
-      'Its voice is <em>distinctly other</em>, set in a different face than your own writing, so it never camouflages itself as yours. A letter from a thoughtful correspondent, not a chat bubble from an assistant.',
-      'Run the companion locally with LM Studio. Nothing leaves your machine. Or, if you&rsquo;d rather, plug in an Anthropic or OpenAI key and let the cloud do the inference. The trade is yours.',
+      'When you&rsquo;re ready to look at an entry more closely, the companion reads it with you and asks the questions a good listener would. It&rsquo;s grounded in CBT and ACT — the same evidence-based techniques therapists use to notice thought patterns and what you keep circling back to.',
+      'It writes in a different typeface from your own, so its voice always reads as separate from yours — <em>a reply from a thoughtful correspondent,</em> not your own words echoed back.',
+      'You choose where it runs: entirely on your own machine, or through an Anthropic or OpenAI key if you prefer. Either way, the choice is yours.',
     ],
     image: asset('assets/chat.png'),
     alt: "A therapeutic conversation in the nopy chat view, with the companion's messages set in a warm editorial serif.",
@@ -37,10 +37,10 @@ export const FEATURES: Feature[] = [
   },
   {
     tag: 'Understand · Profile',
-    titleHtml: 'Patterns, without <em>performance metrics.</em>',
+    titleHtml: 'See the patterns in <em>your own words.</em>',
     bodyHtml: [
-      'Mood over time. Recurring themes. Reflection depth. Surfaced when you ask, not pushed at you in a weekly email. The profile is for you to read, not a scoreboard you&rsquo;re trying to beat.',
-      'Generated on demand from the entries you&rsquo;ve already chosen to index. You pick the scope. You decide when it updates.',
+      'Nopy can show how your mood moves over time, the themes that recur, and how your reflection deepens — built from your entries, only when you ask. You read it to understand yourself, on your own terms.',
+      'You decide what&rsquo;s included and when it updates. Nothing is calculated in the background.',
     ],
     image: asset('assets/profile.png'),
     alt: 'The psychological profile view with a mood-over-time chart, emotional distribution, and a pill-shaped list of recurring themes.',

@@ -21,8 +21,8 @@ describe('App', () => {
     render(<App />)
 
     // Hero title — split across nodes due to <br /> + <em>, so test fragments.
-    expect(screen.getByText(/A quiet place to/)).toBeInTheDocument()
-    expect(screen.getByText(/think with yourself\./)).toBeInTheDocument()
+    expect(screen.getByText(/Write privately\. Reflect deeply\./)).toBeInTheDocument()
+    expect(screen.getByText(/Own everything\./)).toBeInTheDocument()
 
     // Footer end-of-page colophon — confirms render reached the last section.
     expect(screen.getByText(/set in Fraunces/)).toBeInTheDocument()

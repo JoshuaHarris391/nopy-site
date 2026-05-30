@@ -7,7 +7,7 @@ export function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <Brand />
-          <p className="footer-tagline">A quiet, local-first journal that thinks with you.</p>
+          <p className="footer-tagline">A private, local-first journal that thinks with you.</p>
         </div>
         <div className="footer-col">
           <h5>Product</h5>
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 nopy · Built quietly, in the open.</span>
+        <span>© 2026 nopy · Built in the open.</span>
         <span className="colophon">· set in Fraunces &amp; Source Serif ·</span>
       </div>
     </footer>
