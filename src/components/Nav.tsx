@@ -62,12 +62,12 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
             </svg>
             GitHub
           </a>
-          <a href="/#start" className="btn btn-primary">
+          <Link to="/downloads" className="btn btn-primary">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 4v12M6 10l6 6 6-6M4 20h16" />
             </svg>
             Download
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

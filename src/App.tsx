@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-route
 import { Footer } from './components/Footer'
 import { Nav } from './components/Nav'
 import { DeveloperPage } from './pages/DeveloperPage'
+import { DownloadsPage } from './pages/DownloadsPage'
 import { LandingPage } from './pages/LandingPage'
 import { useTheme } from './hooks/useTheme'
 
@@ -28,6 +29,7 @@ export function AppShell() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/developers" element={<DeveloperPage />} />
+        <Route path="/downloads" element={<DownloadsPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

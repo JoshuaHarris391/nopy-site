@@ -133,9 +133,9 @@ export function DeveloperPage() {
           <h2>Everything here runs on your machine.</h2>
           <p>Download nopy, or read the source first. Both paths keep your words yours.</p>
           <div className="hero-ctas">
-            <a href="/#start" className="btn btn-primary btn-lg">
+            <Link to="/downloads" className="btn btn-primary btn-lg">
               Download nopy
-            </a>
+            </Link>
             <a
               href={GITHUB_URL}
               target="_blank"

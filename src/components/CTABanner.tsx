@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { GITHUB_URL } from '../data/nav'
 
 export function CTABanner() {
@@ -13,12 +14,12 @@ export function CTABanner() {
           Download nopy and keep a journal you&rsquo;ll still recognize in ten years.
         </p>
         <div className="hero-ctas reveal reveal-up">
-          <a href="#start" className="btn btn-primary btn-lg">
+          <Link to="/downloads" className="btn btn-primary btn-lg">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 4v12M6 10l6 6 6-6M4 20h16" />
             </svg>
-            Download for Desktop
-          </a>
+            Download nopy
+          </Link>
           <a
             href={GITHUB_URL}
             target="_blank"

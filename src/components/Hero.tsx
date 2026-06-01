@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom'
 import { asset } from '../data/asset'
 import { GITHUB_URL } from '../data/nav'
+import { VERSION } from '../data/downloads'
 
 export function Hero() {
   return (
@@ -10,7 +12,7 @@ export function Hero() {
         <div className="hero-grid">
           <div className="hero-inner">
             <div className="eyebrow">
-              <span className="dot" /> Version 0.3 · macOS · Linux
+              <span className="dot" /> Version {VERSION} · macOS · Linux
             </div>
             <h1 className="hero-title reveal in">
               Write privately. Reflect deeply.
@@ -24,12 +26,12 @@ export function Hero() {
               machine, so your words never have to leave it.
             </p>
             <div className="hero-ctas reveal in">
-              <a href="#start" className="btn btn-primary btn-lg">
+              <Link to="/downloads" className="btn btn-primary btn-lg">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 4v12M6 10l6 6 6-6M4 20h16" />
                 </svg>
-                Download for macOS
-              </a>
+                Download nopy
+              </Link>
               <a
                 href={GITHUB_URL}
                 target="_blank"

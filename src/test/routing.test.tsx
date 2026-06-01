@@ -39,4 +39,24 @@ describe('routing', () => {
     // The maker's note lives only on the landing page, so it must be absent here.
     expect(screen.queryByText(/A note from the maker/i)).not.toBeInTheDocument()
   })
+
+  it('shows the downloads page at "/downloads", listing both Mac builds', () => {
+    // The downloads page must always offer both Mac options regardless of which
+    // system the visitor is on, so a non-technical user can self-select. We don't
+    // assert the "Recommended for you" highlight here: it depends on OS detection,
+    // and jsdom's userAgent is neither macOS nor Linux, so nothing is highlighted.
+    render(
+      <MemoryRouter initialEntries={['/downloads']}>
+        <AppShell />
+      </MemoryRouter>,
+    )
+
+    // The downloads headline (unique to this page).
+    expect(screen.getByText(/Get nopy for/i)).toBeInTheDocument()
+    // Both Mac builds are labelled so the user can pick the right one.
+    expect(screen.getByText(/macOS, Apple Silicon/i)).toBeInTheDocument()
+    expect(screen.getByText(/macOS, Intel/i)).toBeInTheDocument()
+    // The landing hero headline must NOT appear on this route.
+    expect(screen.queryByText(/Write privately\. Reflect deeply\./)).not.toBeInTheDocument()
+  })
 })

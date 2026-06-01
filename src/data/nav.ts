@@ -10,6 +10,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Privacy', href: '/#privacy' },
   { label: 'Get Started', href: '/#start' },
   { label: 'FAQ', href: '/#faq' },
+  { label: 'Download', to: '/downloads' },
   { label: 'For developers', to: '/developers' },
 ]
 

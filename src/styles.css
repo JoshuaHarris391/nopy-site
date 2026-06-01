@@ -1105,3 +1105,106 @@ footer {
 }
 .dev-link a { color: var(--forest); font-weight: 600; }
 .dev-link a:hover { text-decoration: underline; }
+
+/* ── Downloads page ───────────────────────────────────────────────── */
+.download-rec {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 26px 30px;
+  border: 1px solid var(--forest);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--forest) 8%, var(--parchment));
+  box-shadow: var(--shadow-warm);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.download-rec:hover { transform: translateY(-2px); box-shadow: var(--shadow-warm-deep); }
+.download-rec-badge {
+  align-self: flex-start;
+  margin-bottom: 4px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+
+.download-group { margin-bottom: 44px; }
+.download-group:last-of-type { margin-bottom: 0; }
+.download-group-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 640px) { .download-grid { grid-template-columns: 1fr; } }
+
+.download-card,
+.download-rec { position: relative; }
+.download-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 56px 22px 24px;
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-md);
+  background: var(--warm-cream);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+}
+.download-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--bark);
+  box-shadow: var(--shadow-warm-hover);
+}
+.download-card.is-recommended { border-color: var(--forest); }
+
+.download-card-os {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -.005em;
+  color: var(--ink);
+}
+.download-card-help {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--manuscript);
+}
+
+.download-card svg,
+.download-rec svg {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 22px;
+  height: 22px;
+  stroke: var(--forest);
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.download-help-note {
+  margin-top: 36px;
+  padding: 18px 22px;
+  border-left: 2px solid var(--amber);
+  background: color-mix(in oklab, var(--amber) 7%, transparent);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--manuscript);
+}
+.download-help-note strong { color: var(--ink); }
