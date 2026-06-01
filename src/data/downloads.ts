@@ -5,7 +5,7 @@
  * build stores its own filename template because the .rpm uses an irregular
  * scheme (dashes and a -1 build tag) that can't be derived from arch alone.
  */
-export const VERSION = '0.6.0'
+export const VERSION = '0.7.0'
 
 const RELEASE_BASE = 'https://github.com/JoshuaHarris391/nopy/releases/download'
 
