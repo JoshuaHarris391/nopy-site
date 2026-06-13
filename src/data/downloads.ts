@@ -1,18 +1,32 @@
 /**
- * Single source of truth for the current release. Bump VERSION once per release:
- * the filenames below carry a {v} token that is swapped for VERSION, so both the
- * URL path (vX.Y.Z) and the version baked into each filename stay in sync. Each
- * build stores its own filename template because the .rpm uses an irregular
- * scheme (dashes and a -1 build tag) that can't be derived from arch alone.
+ * The version actually shown and linked comes from the GitHub releases API at
+ * runtime (see useLatestVersion). FALLBACK_VERSION is what renders immediately
+ * and what visitors get if that request fails, so keep it pointing at a release
+ * whose assets still exist. The filenames below carry a {v} token that is
+ * swapped for the version, so both the URL path (vX.Y.Z) and the version baked
+ * into each filename stay in sync. Each build stores its own filename template
+ * because the .rpm uses an irregular scheme (dashes and a -1 build tag) that
+ * can't be derived from arch alone.
  */
-export const VERSION = '0.7.0'
+export const FALLBACK_VERSION = '0.7.0'
 
 const RELEASE_BASE = 'https://github.com/JoshuaHarris391/nopy/releases/download'
 
-/** Builds a GitHub release asset URL from a filename template, swapping {v} for VERSION. */
-export function downloadUrl(filenameTemplate: string): string {
-  const filename = filenameTemplate.split('{v}').join(VERSION)
-  return `${RELEASE_BASE}/v${VERSION}/${filename}`
+/**
+ * Extracts a bare semver string from a release tag like "v0.8.0".
+ * Returns null for anything that doesn't look like a plain release tag
+ * (drafts, odd tags), so callers fall back rather than build broken URLs.
+ */
+export function parseReleaseTag(tag: unknown): string | null {
+  if (typeof tag !== 'string') return null
+  const match = /^v?(\d+\.\d+\.\d+)$/.exec(tag.trim())
+  return match ? match[1] : null
+}
+
+/** Builds a GitHub release asset URL from a filename template, swapping {v} for the version. */
+export function downloadUrl(filenameTemplate: string, version: string = FALLBACK_VERSION): string {
+  const filename = filenameTemplate.split('{v}').join(version)
+  return `${RELEASE_BASE}/v${version}/${filename}`
 }
 
 /** Stable keys used to match the auto-detected platform to a recommended build. */

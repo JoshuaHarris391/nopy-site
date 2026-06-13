@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { asset } from '../data/asset'
 import { GITHUB_URL } from '../data/nav'
-import { VERSION } from '../data/downloads'
+import { useLatestVersion } from '../hooks/useLatestVersion'
 
 export function Hero() {
+  const version = useLatestVersion()
   return (
     <header className="hero" id="hero">
       <div className="hero-wash" />
@@ -12,7 +13,7 @@ export function Hero() {
         <div className="hero-grid">
           <div className="hero-inner">
             <div className="eyebrow">
-              <span className="dot" /> Version {VERSION} · <span className="keep-case">macOS</span> · Linux
+              <span className="dot" /> Version {version} · <span className="keep-case">macOS</span> · Linux
             </div>
             <h1 className="hero-title reveal in">
               Write privately. Reflect deeply.

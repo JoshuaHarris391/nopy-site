@@ -42,3 +42,11 @@ if (!('IntersectionObserver' in window)) {
 
 // jsdom's window.scrollTo isn't implemented; the router's ScrollToTop calls it.
 vi.stubGlobal('scrollTo', vi.fn())
+
+// useLatestVersion fetches the GitHub releases API on mount. Tests must never
+// hit the real network, so fetch answers "not ok" and the hook stays on its
+// hardcoded fallback version — which is also what the assertions expect.
+vi.stubGlobal(
+  'fetch',
+  vi.fn(() => Promise.resolve({ ok: false } as Response)),
+)

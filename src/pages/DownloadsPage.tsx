@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
 import { useDetectedPlatform } from '../hooks/useDetectedPlatform'
-import { DOWNLOAD_GROUPS, VERSION, downloadUrl, findBuild, type Build } from '../data/downloads'
+import { useLatestVersion } from '../hooks/useLatestVersion'
+import { DOWNLOAD_GROUPS, downloadUrl, findBuild, type Build } from '../data/downloads'
 import { GITHUB_URL, RELEASES_URL } from '../data/nav'
 
 /** The download arrow, shared by the recommended block and every card. */
@@ -23,6 +24,7 @@ function DownloadIcon() {
 export function DownloadsPage() {
   useReveal()
   const detected = useDetectedPlatform()
+  const version = useLatestVersion()
   const recommended = findBuild(detected)
 
   return (
@@ -37,12 +39,12 @@ export function DownloadsPage() {
             <h1 className="section-title">Get nopy for your machine.</h1>
             <p className="section-lede">
               Free and open source. Pick your system below and the download starts. Version{' '}
-              {VERSION}, for macOS and Linux.
+              {version}, for macOS and Linux.
             </p>
           </div>
 
           {recommended && (
-            <a className="download-rec reveal" href={downloadUrl(recommended.filename)}>
+            <a className="download-rec reveal" href={downloadUrl(recommended.filename, version)}>
               <span className="download-rec-badge">Recommended for you</span>
               <span className="download-card-os">{recommended.label}</span>
               <span className="download-card-help">{recommended.help}</span>
@@ -67,6 +69,7 @@ export function DownloadsPage() {
                   <DownloadCard
                     key={build.label}
                     build={build}
+                    version={version}
                     recommended={Boolean(build.detect) && build.detect === detected}
                   />
                 ))}
@@ -98,11 +101,19 @@ export function DownloadsPage() {
   )
 }
 
-function DownloadCard({ build, recommended }: { build: Build; recommended: boolean }) {
+function DownloadCard({
+  build,
+  version,
+  recommended,
+}: {
+  build: Build
+  version: string
+  recommended: boolean
+}) {
   return (
     <a
       className={`download-card${recommended ? ' is-recommended' : ''}`}
-      href={downloadUrl(build.filename)}
+      href={downloadUrl(build.filename, version)}
     >
       <span className="download-card-os">{build.label}</span>
       <span className="download-card-help">{build.help}</span>
