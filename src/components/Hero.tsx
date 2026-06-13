@@ -12,7 +12,7 @@ export function Hero() {
         <div className="hero-grid">
           <div className="hero-inner">
             <div className="eyebrow">
-              <span className="dot" /> Version {VERSION} · macOS · Linux
+              <span className="dot" /> Version {VERSION} · <span className="keep-case">macOS</span> · Linux
             </div>
             <h1 className="hero-title reveal in">
               Write privately. Reflect deeply.
@@ -20,10 +20,9 @@ export function Hero() {
               <em>Own everything.</em>
             </h1>
             <p className="hero-lede reveal in">
-              Nopy is a private journal that lives on your own computer: plain text files you
-              keep, back up, and open in any app. When you want to go deeper, an AI companion grounded
-              in <em>CBT and ACT</em> reflects on an entry with you. It can run entirely on your
-              machine, so your words never have to leave it.
+              Nopy is a journal that lives on your computer as plain text files you keep forever.
+              When you want to go deeper, a companion reads an entry with you and asks good
+              questions. It can run entirely on your machine.
             </p>
             <div className="hero-ctas reveal in">
               <Link to="/downloads" className="btn btn-primary btn-lg">
@@ -47,23 +46,9 @@ export function Hero() {
             <div className="hero-meta reveal in">
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="14" rx="1" />
-                  <path d="M3 9h18" />
-                </svg>
-                No account, no tracking
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2 4 6v6c0 5 3.4 9.5 8 10 4.6-.5 8-5 8-10V6l-8-4z" />
                 </svg>
-                Your words stay on your machine
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 4h16v16H4z" />
-                  <path d="M8 8h8M8 12h8M8 16h5" />
-                </svg>
-                Plain text, readable anywhere
+                No account. No server. Just files in a folder you choose.
               </span>
             </div>
           </div>

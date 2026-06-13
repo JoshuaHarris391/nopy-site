@@ -70,7 +70,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 nopy · Built in the open.</span>
-        <span className="colophon">· set in Fraunces &amp; Source Serif ·</span>
+        <span className="colophon">· set in Fraunces &amp; Nunito Sans ·</span>
       </div>
     </footer>
   )

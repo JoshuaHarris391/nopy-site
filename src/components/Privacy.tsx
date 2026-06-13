@@ -8,11 +8,11 @@ export function Privacy() {
         <div className="section-head">
           <div className="section-eyebrow">Your privacy</div>
           <h2 className="section-title">
-            Your journal <em>never leaves your computer.</em>
+            Your journal never leaves your computer.
           </h2>
           <p className="section-lede">
-            There&rsquo;s no nopy account and no nopy server. Your entries are files on your own
-            computer, and the AI can run there too, so nothing has to go online at all.
+            I built nopy so my own journal would be a folder of files I control. Yours works the
+            same way.
           </p>
         </div>
 

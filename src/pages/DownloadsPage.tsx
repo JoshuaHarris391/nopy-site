@@ -34,9 +34,7 @@ export function DownloadsPage() {
               &larr; Back to nopy
             </Link>
             <div className="section-eyebrow">Download</div>
-            <h1 className="section-title">
-              Get nopy for <em>your machine.</em>
-            </h1>
+            <h1 className="section-title">Get nopy for your machine.</h1>
             <p className="section-lede">
               Free and open source. Pick your system below and the download starts. Version{' '}
               {VERSION}, for macOS and Linux.

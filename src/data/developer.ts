@@ -36,6 +36,31 @@ export const ARCHITECTURE_CELLS: DevCellData[] = [
   },
 ]
 
+export interface DevFAQItem {
+  question: string
+  answerHtml: string
+}
+
+/** Model/infrastructure questions moved off the landing page — journalers don't
+ *  need to meet LM Studio, Gemma or ZDR before deciding to keep a journal. */
+export const DEV_FAQ: DevFAQItem[] = [
+  {
+    question: 'Can the AI run fully on my Mac?',
+    answerHtml:
+      'Yes. This is the recommended setup. Install <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a>, load a small model (Gemma 4 E4B is a sensible default for 16&nbsp;GB Macs, about 5&nbsp;GB on disk), and switch nopy to <strong>Local</strong> mode in Settings. Chat, profile generation, and entry indexing all go to <code>localhost</code>. No outbound network calls.',
+  },
+  {
+    question: 'How does a local model compare to Claude or GPT?',
+    answerHtml:
+      'Honestly: not as polished. Gemma 4 E4B is a smart small model and the everyday chat experience is good, but the long-form psychological profile is noticeably less nuanced than a big cloud model like Claude or GPT on the same prompt. Local mode is the right default for privacy. Reach for a cloud key only when you&rsquo;ve decided the trade is worth it.',
+  },
+  {
+    question: 'What if I do want to use Anthropic or OpenAI?',
+    answerHtml:
+      'Paste your key into Settings and you&rsquo;re set. One strong recommendation: <strong>enable Zero Data Retention</strong> on your account if your plan supports it. With ZDR on, the provider doesn&rsquo;t store your prompts or outputs at all. Without it, Anthropic retains API content for up to 30 days by default; OpenAI&rsquo;s defaults vary by product. Read each provider&rsquo;s data-retention policy before sending anything sensitive.',
+  },
+]
+
 export const LOCAL_AI_CELLS: DevCellData[] = [
   {
     title: 'Run the model locally',

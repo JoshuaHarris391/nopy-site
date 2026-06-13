@@ -22,7 +22,7 @@ export const STEPS: Step[] = [
     num: '03',
     title: 'Add a companion (optional)',
     bodyHtml:
-      'Want the AI companion? Install the free <strong>LM Studio</strong> app to run it on your own machine, or paste an Anthropic or OpenAI key to use the cloud. Skip this and nopy stays a plain journal.',
+      'Want the companion? Install the free <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a> app to run it on your own machine, or use a cloud key if you have one. Skip this and nopy stays a plain journal.',
   },
   {
     num: '04',

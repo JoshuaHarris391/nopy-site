@@ -8,7 +8,7 @@ export function CTABanner() {
         <h2 className="reveal reveal-up">
           Open the notebook.
           <br />
-          <em>Close the feed.</em>
+          Close the feed.
         </h2>
         <p className="reveal reveal-up">
           Download nopy and keep a journal you&rsquo;ll still recognize in ten years.
@@ -18,7 +18,7 @@ export function CTABanner() {
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 4v12M6 10l6 6 6-6M4 20h16" />
             </svg>
-            Download nopy
+            Start your journal
           </Link>
           <a
             href={GITHUB_URL}

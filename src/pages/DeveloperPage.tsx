@@ -4,7 +4,8 @@ import { useReveal } from '../hooks/useReveal'
 import { GITHUB_URL } from '../data/nav'
 import { ANTHRO_FACTS, ANTHRO_HEADING_HTML } from '../data/privacy'
 import { STACK } from '../data/stack'
-import { ARCHITECTURE_CELLS, LOCAL_AI_CELLS, type DevCellData } from '../data/developer'
+import { ARCHITECTURE_CELLS, DEV_FAQ, LOCAL_AI_CELLS, type DevCellData } from '../data/developer'
+import { FAQList } from '../components/FAQ'
 
 /**
  * The technical / privacy deep-dive ("/developers"). Everything here is the long
@@ -23,9 +24,7 @@ export function DeveloperPage() {
               &larr; Back to nopy
             </Link>
             <div className="section-eyebrow">For developers &amp; the privacy-conscious</div>
-            <h1 className="section-title">
-              How nopy keeps your <em>words yours.</em>
-            </h1>
+            <h1 className="section-title">How nopy keeps your words yours.</h1>
             <p className="section-lede">
               The landing page keeps it short. This is the long version: where your data lives, how
               to verify every privacy claim yourself, and how to run or build nopy on your own.
@@ -89,6 +88,18 @@ export function DeveloperPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
+            <div className="section-eyebrow">Model questions</div>
+            <h2 className="section-title">The fine print on models.</h2>
+          </div>
+          <div className="reveal">
+            <FAQList items={DEV_FAQ} />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-cream">
+        <div className="wrap">
+          <div className="section-head">
             <div className="section-eyebrow">Build it yourself</div>
             <h2 className="section-title">Open source, top to bottom.</h2>
             <p className="section-lede">Read the code, build it from source, fork it, or send a patch.</p>
@@ -106,7 +117,7 @@ export function DeveloperPage() {
         </div>
       </section>
 
-      <section className="section section-cream">
+      <section className="section">
         <div className="wrap">
           <div className="section-head">
             <div className="section-eyebrow">Under the hood</div>

@@ -18,6 +18,11 @@ export function FeatureRow({ feature }: { feature: Feature }) {
           {feature.bodyHtml.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
+          <ul className="feat-points">
+            {feature.pointsHtml.map((point, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
+            ))}
+          </ul>
         </div>
       </div>
       <div className={`feat-shot reveal ${shotDirection}`}>

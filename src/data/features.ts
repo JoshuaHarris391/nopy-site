@@ -2,10 +2,12 @@ import { asset } from './asset'
 
 export interface Feature {
   tag: string
-  /** Title with optional <em>…</em> wrap; rendered via dangerouslySetInnerHTML to preserve italic emphasis. */
+  /** Title HTML; rendered via dangerouslySetInnerHTML. */
   titleHtml: string
   /** Paragraphs as HTML — keeps inline <code>, <em> markup from the reference. */
   bodyHtml: string[]
+  /** Short scannable points rendered below the body; may carry inline <code>. */
+  pointsHtml: string[]
   image: string
   alt: string
   reverse: boolean
@@ -13,37 +15,48 @@ export interface Feature {
 
 export const FEATURES: Feature[] = [
   {
-    tag: 'Reflect · Journal',
-    titleHtml: 'Write in plain text you&rsquo;ll <em>always be able to open.</em>',
+    tag: 'The page',
+    titleHtml: 'Write in plain text you&rsquo;ll always be able to open.',
     bodyHtml: [
-      'A clean writing page in warm serif type, sized for comfortable reading. Add a 1–10 mood rating if it helps, or skip it. Prompts only if you want them.',
-      'Every entry is a plain <code>.md</code> file in a folder you choose: readable in any editor, easy to back up, and yours to keep. If nopy disappeared tomorrow, your journal wouldn&rsquo;t.',
+      'A clean writing page, with prompts only if you want them and a mood rating only if it helps. Every entry is a plain file in a folder you choose. If nopy disappeared tomorrow, your journal wouldn&rsquo;t.',
+    ],
+    pointsHtml: [
+      'Plain <code>.md</code> files',
+      'Opens in any editor',
+      'Yours in ten years',
     ],
     image: asset('assets/editor.png'),
     alt: 'The nopy journal editor showing a long entry set in warm serif type, with a mood scale at the top.',
     reverse: false,
   },
   {
-    tag: 'Understand · Chat',
-    titleHtml: 'An AI companion that <em>reflects with you.</em>',
+    tag: 'The companion',
+    titleHtml: 'A companion that reflects with you.',
     bodyHtml: [
-      'When you&rsquo;re ready to look at an entry more closely, the companion reads it with you and asks the questions a good listener would. It&rsquo;s grounded in CBT and ACT: the same evidence-based techniques therapists use to notice thought patterns and what you keep circling back to.',
-      'It writes in a different typeface from your own, so its voice always reads as separate from yours, <em>a reply from a thoughtful correspondent,</em> not your own words echoed back.',
-      'You choose where it runs: entirely on your own machine, or through an Anthropic or OpenAI key if you prefer. Either way, the choice is yours.',
+      'When you&rsquo;re ready to look at an entry more closely, the companion reads it with you and asks the kinds of questions a good listener would. It writes in its own typeface, so its voice always reads as separate from yours. (The approach borrows from CBT and ACT, if you like to know what&rsquo;s under the hood.)',
+    ],
+    pointsHtml: [
+      'Asks, never prescribes',
+      'Reads only what you share',
+      'Can run on your machine',
     ],
     image: asset('assets/chat.png'),
-    alt: "A therapeutic conversation in the nopy chat view, with the companion's messages set in a warm editorial serif.",
+    alt: "A conversation in the nopy chat view, with the companion's messages set in a warm editorial serif.",
     reverse: true,
   },
   {
-    tag: 'Understand · Profile',
-    titleHtml: 'See the patterns in <em>your own words.</em>',
+    tag: 'The patterns',
+    titleHtml: 'See the patterns in your own words.',
     bodyHtml: [
-      'Nopy can show how your mood moves over time, the themes that recur, and how your reflection deepens, built from your entries, only when you ask. You read it to understand yourself, on your own terms.',
-      'You decide what&rsquo;s included and when it updates. Nothing is calculated in the background.',
+      'When you ask, nopy gathers the themes that recur across your entries and how your mood has moved. You read it to understand yourself, on your own terms.',
+    ],
+    pointsHtml: [
+      'Only when you ask',
+      'Built from your entries',
+      'You choose what&rsquo;s included',
     ],
     image: asset('assets/profile.png'),
-    alt: 'The psychological profile view with a mood-over-time chart, emotional distribution, and a pill-shaped list of recurring themes.',
+    alt: 'The profile view with a mood-over-time chart and a pill-shaped list of recurring themes.',
     reverse: false,
   },
 ]

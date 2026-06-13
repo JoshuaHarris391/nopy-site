@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { STEPS } from '../data/steps'
 
 export function GetStarted() {
@@ -7,9 +6,7 @@ export function GetStarted() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-eyebrow">Get started</div>
-          <h2 className="section-title">
-            Up and running in <em>four steps.</em>
-          </h2>
+          <h2 className="section-title">Up and running in four steps.</h2>
           <p className="section-lede">
             Nopy is free and open source. Download the app, or build it from source yourself.
             Either way, everything stays yours.
@@ -29,10 +26,6 @@ export function GetStarted() {
           ))}
         </div>
 
-        <p className="dev-link reveal">
-          Building from source, or curious about the data flows and stack?{' '}
-          <Link to="/developers">See the developer &amp; privacy notes &rarr;</Link>
-        </p>
       </div>
     </section>
   )

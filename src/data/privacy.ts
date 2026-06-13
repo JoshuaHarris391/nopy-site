@@ -8,24 +8,23 @@ export interface PrivacyCell {
 export const PRIVACY_CELLS: PrivacyCell[] = [
   {
     variant: 'local',
-    titleHtml: 'Your journal stays <em>fully local</em>',
+    titleHtml: 'Your journal stays fully local',
     sub: 'Always · Never Leaves Your Machine',
     itemsHtml: [
-      'Your entries are <code>.md</code> files in a folder you pick. They never sync anywhere.',
-      'Your mood history and the patterns nopy finds stay on your computer too.',
-      'Your settings and session history live on-device, all the time.',
-      'No account to create, no usage tracking, no server in between.',
+      '<strong>No account.</strong> Nothing to create, nothing to sign in to.',
+      '<strong>No server.</strong> There is no nopy backend, anywhere.',
+      '<strong>No tracking.</strong> Your mood history and patterns stay on your computer.',
+      '<strong>Just files.</strong> Plain <code>.md</code> entries you can open in any app.',
     ],
   },
   {
     variant: 'local-ai',
-    titleHtml: 'Your companion can stay <em>local too</em>',
-    sub: 'Recommended · LM Studio on Your Mac',
+    titleHtml: 'Your companion can stay local too',
+    sub: 'Optional · Runs on Your Machine',
     itemsHtml: [
-      'Run the companion on your own machine with the free <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a> app. Chat and insights all happen on your computer.',
-      'Nothing you write (entries, questions, or summaries) ever goes online.',
-      'You don&rsquo;t have to take our word for it: in local mode, nothing nopy sends ever leaves your machine.',
-      'A small model like Gemma runs comfortably on a recent Mac (about 5&nbsp;GB on disk).',
+      'The companion can run entirely on your own computer, free, through the <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a> app. Chat and insights all happen there.',
+      'In local mode, nothing you write (entries, questions, or summaries) ever goes online.',
+      'Prefer a cloud model? Bring your own key and that works too.',
     ],
   },
 ]
@@ -51,4 +50,4 @@ export const ANTHRO_FACTS: AnthroFact[] = [
 ]
 
 export const ANTHRO_HEADING_HTML =
-  'If you&rsquo;d rather plug in a cloud key (<em>Anthropic or OpenAI</em>), here&rsquo;s the setup to do first.'
+  'If you&rsquo;d rather plug in a cloud key (Anthropic or OpenAI), here&rsquo;s the setup to do first.'

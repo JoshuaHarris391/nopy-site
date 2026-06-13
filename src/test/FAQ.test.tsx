@@ -24,7 +24,7 @@ describe('FAQ', () => {
     render(<FAQ />)
 
     const firstQuestion = screen.getByRole('button', {
-      name: /Do I need an Anthropic API key/i,
+      name: /Do I need an account or an API key/i,
     })
 
     expect(firstQuestion).toHaveAttribute('aria-expanded', 'false')
@@ -40,7 +40,7 @@ describe('FAQ', () => {
     const user = userEvent.setup()
     render(<FAQ />)
 
-    const q1 = screen.getByRole('button', { name: /Do I need an Anthropic API key/i })
+    const q1 = screen.getByRole('button', { name: /Do I need an account or an API key/i })
     const q2 = screen.getByRole('button', { name: /Where do my entries actually live/i })
 
     await user.click(q1)
