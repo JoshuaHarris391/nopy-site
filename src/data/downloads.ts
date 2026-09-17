@@ -8,7 +8,7 @@
  * because the .rpm uses an irregular scheme (dashes and a -1 build tag) that
  * can't be derived from arch alone.
  */
-export const FALLBACK_VERSION = '0.9.0'
+export const FALLBACK_VERSION = '0.10.0'
 
 const RELEASE_BASE = 'https://github.com/JoshuaHarris391/nopy/releases/download'
 
